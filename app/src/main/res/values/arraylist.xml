@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="courses">
+
+        <item name="Android"/>
+        <item name="C"/>
+        <item name="DataBase"/>
+        <item name="Java"/>
+        <item name="PHP"/>
+        <item name="Python"/>
+        <item name="Swift"/>
+
+
+
+    </string-array>
+
+    <integer-array name="Gridimage">
+
+        <item>@drawable/android</item>
+        <item>@drawable/c</item>
+        <item>@drawable/database</item>
+        <item>@drawable/java</item>
+        <item>@drawable/php</item>
+        <item>@drawable/python</item>
+        <item>@drawable/swift</item>
+    </integer-array>
+
+
+</resources>
