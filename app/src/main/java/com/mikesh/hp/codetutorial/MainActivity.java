@@ -12,18 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridView;
-
-import com.mikesh.hp.codetutorial.adapters.CustomAdapter;
-import com.mikesh.hp.codetutorial.models.MainViewModel;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    String Courses[];
-    int gridimage[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +23,10 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Courses = getResources().getStringArray(R.array.courses);
-        gridimage =getResources().getIntArray(R.array.Gridimage);
 
 
 
 
-        ArrayList<MainViewModel> arraymodel = new ArrayList<>();
-
-        for(int i=0; i<Courses.length;i++) {
-            MainViewModel mainviewmodel = new MainViewModel();
-            mainviewmodel.setCourses(Courses[i]);
-            mainviewmodel.setGridimage(gridimage[i]);
-            arraymodel.add(mainviewmodel);
-
-        }
-
-
-
-        GridView gridView = (GridView)findViewById(R.id.gridview1);
-        CustomAdapter cad = new CustomAdapter(MainActivity.this,R.layout.singlelayout,arraymodel);
-        gridView.setAdapter(cad);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -117,8 +91,6 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_course) {
             // Handle the camera action
         } else if (id == R.id.nav_mreport) {
-
-        } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_settings) {
 

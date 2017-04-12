@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * Created by HP on 08-Apr-17.
  */
 
-public class CustomAdapter extends ArrayAdapter<MainViewModel> {
+public class CustomAdapter<M> extends ArrayAdapter<MainViewModel> {
 
     Context context;
     ArrayList<MainViewModel> mainViewModel;
@@ -27,7 +27,6 @@ public class CustomAdapter extends ArrayAdapter<MainViewModel> {
 
     public CustomAdapter(Context context, int resources, ArrayList<MainViewModel> mainViewModel){
         super(context, resources, mainViewModel);
-
         this.context= context;
         this.mainViewModel= mainViewModel;
 
