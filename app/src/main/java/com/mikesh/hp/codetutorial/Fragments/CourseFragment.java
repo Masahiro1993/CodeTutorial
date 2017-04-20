@@ -34,19 +34,19 @@ public class CourseFragment extends Fragment {
         Courses = getResources().getStringArray(R.array.courses);
         gridimages = getResources().getIntArray(R.array.Gridimage);
 
-        ArrayList<MainViewModel> arraymodel = new ArrayList<MainViewModel>();
+        ArrayList<MainViewModel> arrayModel = new ArrayList<MainViewModel>();
 
         for(int i=0; i<Courses.length;i++) {
             MainViewModel mainviewmodel = new MainViewModel();
             mainviewmodel.setCourses(Courses[i]);
             mainviewmodel.setGridimage(gridimages[i]);
-            arraymodel.add(mainviewmodel);
+            arrayModel.add(mainviewmodel);
         }
 
 
 
         GridView gridView = (GridView)v.findViewById(R.id.gridview1);
-        CustomAdapter<MainViewModel> cad = new CustomAdapter<MainViewModel>(getActivity().getApplicationContext(),R.layout.singlelayout,arraymodel);
+        CustomAdapter cad = new CustomAdapter(getActivity().getApplicationContext(),R.layout.singlelayout,arrayModel);
         gridView.setAdapter(cad);
 
         return v;

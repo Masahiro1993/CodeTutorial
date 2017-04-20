@@ -1,5 +1,6 @@
 package com.mikesh.hp.codetutorial;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -12,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.mikesh.hp.codetutorial.Fragments.CourseFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -89,6 +92,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_course) {
+
+            Intent intent = new Intent(MainActivity.this, CourseFragment.class);
+            startActivity(intent);
             // Handle the camera action
         } else if (id == R.id.nav_mreport) {
 
